@@ -40,6 +40,6 @@ describe('Deck', function() {
     const card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
     const cards = [card1, card2, card3];
     const deck = new Deck(cards);
-    expect(deck.countCards()).to.equal(deck.cards.length);
+    expect(deck.countCards()).to.equal(3);
   });
 });
