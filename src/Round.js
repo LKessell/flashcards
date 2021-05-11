@@ -4,6 +4,9 @@ class Round {
     this.turns = 0;
     this.incorrectGuesses = [];
   }
+  returnCurrentCard() {
+    return this.deck[this.turns];
+  }
 }
 
 module.exports = Round;
