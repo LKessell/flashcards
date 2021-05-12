@@ -22,4 +22,9 @@ describe('Game', function() {
     deck = new Deck(cards);
     round = new Round(deck);
   });
+
+  it('should keep track of the currentRound', function() {
+    const game = new Game(round);
+    expect(game.currentRound).to.deep.equal(round);
+  });
 })
