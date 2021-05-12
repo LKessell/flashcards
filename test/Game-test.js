@@ -23,4 +23,10 @@ describe('Game', function() {
     const game = new Game();
     expect(game.currentRound).to.deep.equal(null);
   });
+
+  it('should be able to start a new round', function() {
+    const game = new Game();
+    game.start();
+    expect(game.currentRound).to.be.an.instanceof(Round);
+  });
 })
