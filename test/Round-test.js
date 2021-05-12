@@ -85,4 +85,11 @@ describe('Round', function() {
     round.takeTurn('mutator method');
     expect(round.calculatePercentCorrect()).to.equal(66);
   });
+
+  it('should print a feedback message at the end of the round', function () {
+    round.takeTurn('object');
+    round.takeTurn('array');
+    round.takeTurn('mutator method');
+    expect(round.endRound()).to.equal('** Round over! ** You answered 100% of the questions correctly!');
+  });
 });
