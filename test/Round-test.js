@@ -69,4 +69,12 @@ describe('Round', function() {
   it('should return \'incorrect!\' for an incorrect guess', function() {
     expect(round.takeTurn('array')).to.equal('incorrect!');
   });
+
+  it('should store incorrect guesses', function() {
+    expect(round.incorrectGuesses).to.deep.equal([]);
+    round.takeTurn('array');
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+    round.takeTurn('object');
+    expect(round.incorrectGuesses).to.deep.equal([1, 2]);
+  })
 });
