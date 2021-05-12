@@ -23,8 +23,8 @@ describe('Game', function() {
     round = new Round(deck);
   });
 
-  it('should keep track of the currentRound', function() {
-    const game = new Game(round);
-    expect(game.currentRound).to.deep.equal(round);
+  it('should start with no currentRound', function() {
+    const game = new Game();
+    expect(game.currentRound).to.deep.equal(null);
   });
 })
