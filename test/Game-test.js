@@ -5,7 +5,9 @@ const Game = require('../src/Game');
 const Round = require('../src/Round');
 
 describe('Game', function() {
+
   let game;
+  
   beforeEach('set up', function() {
     game = new Game();
   });
