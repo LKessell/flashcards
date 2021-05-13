@@ -32,6 +32,7 @@ describe('Deck', function() {
 
   it('should contain Card objects', function() {
     expect(deck.cards[0]).to.be.an.instanceof(Card);
+    expect(deck.cards[0]).to.deep.equal({id: 1, question: 'What allows you to define a set of related information using key-value pairs?', answers: ['object', 'array', 'function'], correctAnswer: 'object'});
   });
 
   it('should know how many Cards are in the deck', function() {
